@@ -134,6 +134,9 @@ ul li a {
   line-height: 2.5rem;
   margin-top: 1rem;
 }
+.vice-mother-board {
+  border-bottom: 1px solid var(--text-secondary-color);
+}
 hr {
   border: 0;
   height: 1px;
@@ -339,26 +342,32 @@ hr {
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     overflow: hidden;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
   .header {
     position: relative;
   }
   .header .navbar {
     position: absolute;
-    background: #f2f2f2;
-    height: 30vh;
+    background: white;
+    height: auto;
     left: 0;
     top: 0;
     right: 0;
     width: 100;
     z-index: 10000;
-    /* display: none; */
   }
   .header .navbar ul {
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
-    gap: 1rem;
+  }
+  .header .navbar ul li {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
   }
   .header .logo a {
     flex-direction: column;
@@ -371,7 +380,9 @@ hr {
   .first-viewport {
     grid-template-columns: 1fr;
     height: 100vh;
-    padding: 7rem 1rem;
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-top: 0;
     grid-gap: 0;
     background-repeat: no-repeat;
@@ -419,9 +430,6 @@ hr {
   }
   .second-viewport {
     padding: 1rem;
-  }
-  .second-viewport .about-the-team {
-    margin-top: -7rem;
   }
   .second-viewport .learn-more .articles {
     grid-template-columns: 1fr;
@@ -500,6 +508,19 @@ hr {
       box-shadow: 1px 1px 1px #191970;
       opacity: 0;
     }
+  }
+}
+@media screen and (width: 375px) {
+  .second-viewport .about-the-team {
+    margin-top: -7rem;
+  }
+  .first-viewport .text {
+    margin-top: -9rem;
+  }
+  .first-viewport .app-photo {
+    min-height: 50vh;
+    background-size: contain;
+    background-position: 50% 50%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
