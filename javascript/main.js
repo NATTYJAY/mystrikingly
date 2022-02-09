@@ -1,6 +1,8 @@
-
 // selects all nav links and converts them to an array element right after
 const navLinks = [...document.querySelectorAll(".nav-link")]
+// navToggleHandler()
+const hamburgerBtn = document.querySelector(".btn")
+const navBar = document.querySelector(".navbar")
 
 // attaches a click event listener to each nav link
 function navToggleHandler() {
@@ -20,10 +22,6 @@ function navToggler(event) {
   // adds the active class to the clicked nav-link element
   event.target.classList.add("active")
 }
-
-// navToggleHandler()
-const hamburgerBtn = document.querySelector(".btn")
-const navBar = document.querySelector(".navbar")
 
 hamburgerBtn.addEventListener("click", () => {
   hamburgerBtn.classList.toggle("open")
